@@ -19,10 +19,10 @@ describe 'as a visitor' do
 
         visit trips_path
 
-        click_on "#{trip_1.name}"
+        click_on trip_1.name
 
         expect(current_path).to eq(trip_path(trip_1))
-        expect(page).to have_content("#{trip_1.name}")
+        expect(page).to have_content(trip_1.name)
       end
     end
   end

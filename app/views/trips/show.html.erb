@@ -1,7 +1,11 @@
 <h1> Trip: <%= @trip.name %> </h1>
 
 <% @trip.trails.each do |trail| %>
-  <%= trail.name %>
+  <%= link_to trail.name, trail_path(trail) %>
   <%= trail.address %>
   <%= trail.length %>
 <% end %>
+
+<%= @trip.total_distance %>
+<%= @trip.average_trail_distance %>
+<%= @trip.longest_trail_distance %>
